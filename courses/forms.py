@@ -9,9 +9,9 @@ class KlasaForm(forms.ModelForm):
         model = Klasa
         fields = '__all__'
         help_texts = {
-            'titulli': 'Psh. Klasa 11 ose Klasa e Informatikes',
-            'pershkrimi':'Vendos nje pershkrim te shkurte te klases',
-            'imazhi':'Mund te vendosesh nje fotografi e klases ose mund te lihet bosh'
+            'titre': 'Classe 11',
+            'description':'Entrez une courte description de la classe',
+            'image':''
         }
 
 class LendaForm(forms.ModelForm):
@@ -19,8 +19,8 @@ class LendaForm(forms.ModelForm):
         model = Lendet
         fields = ['krijues','slug', 'titulli', 'klasa', 'pershkrimi', 'imazhi_lendes']
         help_texts = {
-            'titulli': 'Psh. Matematika, Gjeografi etj',
-            'pershkrimi':'Vendos nje pershkrim te shkurte te lendes',
+            'titre': 'Psh. Matematika, Gjeografi etj',
+            'description':'Vendos nje pershkrim te shkurte te lendes',
             'klasa':'Zhgjidhni klasen per te cilen do te krijoni lenden',
             'imazhi_lendes':'Mund te vendosesh nje fotografi e lendes ose mund te lihet bosh'
         }
@@ -35,10 +35,10 @@ class MesimiForm(forms.ModelForm):
         model = Lesson 
         fields = ['slug','titulli', 'lenda', 'video_id', 'pozicioni', ]
         help_texts = {
-            'titulli':'Vendosni titullin e mesimit',
-            'lenda':'Zgjidhni lenden per te cilen i perket ky mesim',
-            'video_id':'Vendosni ID e videos nga Youtube te cilen do te ngarkoni (<a href="/media/youtube_help.png">ku mund ta gjej ID</a>)',
-            'pozicioni':'Vendosni numrin e pozicionit ose radhen e mesimit '
+            'titre':'Entrez le titre de la leçon',
+            'lenda':'Choisissez le sujet auquel appartient cette leçon',
+            'video_id':'',
+            'pozicioni':'Saisir le numéro de position ou la séquence dapprentissage '
         }
         widgets = {
             'slug': forms.HiddenInput()

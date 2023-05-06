@@ -37,7 +37,7 @@ def Profile(request):
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()
             p_form.save()
-            messages.success(request, 'Llogaria juaj u perditsua me sukses!')
+            messages.success(request, 'Votre compte a été mis à jour avec succès !')
             return redirect('users:profile')
     else:
         u_form = userUpdateForm(instance=request.user)
@@ -63,22 +63,22 @@ def kerkesa(request):
         prof_id = prof.id
         Pro.objects.filter(id=prof_id).update(is_teacher=True)
         
-        message = 'Kerkesa juaj per nje llogari mesuesi u pranua! Tani ju mund te ktheheni tek MesoOn dhe te ngarkoni kurse dhe leksione, pune te mbare!'
+        message = 'Votre demande de compte enseignant a été acceptée ! Vous pouvez maintenant revenir à E-ducate et télécharger des cours et des vidéos, le travail est fait !'
         send_mail(
-            'MesoOn, kerkesa u pranua.',
+            'E-ducate, demande acceptée.',
             message,
-            'mesoon@no-reply.com',
+            'educate@no-reply.com',
             [email],
             fail_silently=False,
         )
         send_mail(
-            'MesoOn',
-            'Dikush beri kerkese per llogari mesuesi. Me info: ' + emri + ' , ' + email + ' , ' + numri_tel + ' , ' + str(prof) + '.',
-            'mesoon@no-reply.com',
-            ['redian1marku@gmail.com'],
+            'E-ducate',
+            'Quelquun a fait une demande pour le compte de lenseignant. Avec infos : ' + emri + ' , ' + email + ' , ' + numri_tel + ' , ' + str(prof) + '.',
+            'educate@no-reply.com',
+            ['ounairzineb@gmail.com'],
             fail_silently=False,
         )
-        messages.info(request, f'Kerkesa u dergua me sukses, ju do te njoftoheni me email.')
+        messages.info(request, f'La demande a été envoyée avec succès, vous serez averti par e-mail.')
         return redirect('courses:home')
 
 

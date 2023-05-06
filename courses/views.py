@@ -66,13 +66,13 @@ def SearchView(request):
 @login_required
 def krijo_klase(request):
     if not request.user.profile.is_teacher == True:
-        messages.error(request, f'Llogaria juaj nuk ka akses ne kete url vetem llogarite e mesuesve!')
+        messages.error(request, f'Votre compte na pas accès à cette url, uniquement aux comptes enseignants !')
         return redirect('courses:home')
     if request.method == 'POST':
         form = KlasaForm(data=request.POST, files=request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Klasa juaj u krijua.')
+            messages.success(request, f'Votre classe a été créée.')
             return redirect('courses:home')
     else:
         form = KlasaForm()
@@ -85,7 +85,7 @@ def krijo_klase(request):
 @login_required
 def krijo_lende(request):
     if not request.user.profile.is_teacher == True:
-        messages.error(request, f'Llogaria juaj nuk ka akses ne kete url vetem llogarite e mesuesve!')
+        messages.error(request, f'Votre compte na pas accès à cette url, uniquement aux comptes enseignants !')
         return redirect('courses:home')
     if request.method == 'POST':
         form = LendaForm(request.POST)
@@ -93,7 +93,7 @@ def krijo_lende(request):
             form.save()
             klasa = form.cleaned_data['klasa']
             slug = klasa.id
-            messages.success(request, f'Lenda juaj u krijua.')
+            messages.success(request, f'Votre fil a été créé.')
             return redirect('/courses/' + str(slug))
     else:
         form = LendaForm(initial={'krijues':request.user.id, 'slug':secrets.token_hex(nbytes=16)})
@@ -106,7 +106,7 @@ def krijo_lende(request):
 @login_required
 def krijo_mesim(request):
     if not request.user.profile.is_teacher == True:
-        messages.error(request, f'Llogaria juaj nuk ka akses ne kete url vetem llogarite e mesuesve!')
+        messages.error(request, f'Votre compte na pas accès à cette url, uniquement aux comptes enseignants !')
         return redirect('courses:home')
     if request.method == 'POST':
         form = MesimiForm(request.POST)
@@ -114,7 +114,7 @@ def krijo_mesim(request):
             form.save()
             lenda = form.cleaned_data['lenda']
             slug = lenda.slug
-            messages.success(request, f'Mesimi juaj u krijua.')
+            messages.success(request, f'Votre classe a été créée.')
             return redirect('/courses/' + str(slug) )
     else:
         form = MesimiForm(initial={'slug':secrets.token_hex(nbytes=16)})

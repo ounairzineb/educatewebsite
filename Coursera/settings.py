@@ -185,8 +185,8 @@ ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
 
 EMAIL_USE_TLS = True
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='put your email here'
-EMAIL_HOST_PASSWORD='put your email password here'
+EMAIL_HOST_USER='zineboun23@gmail.com'
+EMAIL_HOST_PASSWORD=''
 EMAIL_PORT = 587 
 
 

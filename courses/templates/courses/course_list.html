@@ -7,8 +7,8 @@
 <div class="page-info-section set-bg" data-setbg="{% static 'webuni/img/page-bg/1.jpg' %}">
   <div class="container">
     <div class="site-breadcrumb">
-      <a href="/">Kryefaqja</a>
-      <span>Kurset</span>
+      <a href="/">Home</a>
+      <span>Cours</span>
     </div>
   </div>
 </div>
@@ -20,14 +20,14 @@
   <div class="container">
     <div class="search-warp">
       <div class="section-title text-white">
-        <h2><span>Kerko kursin</span></h2>
+        <h2><span>Rechercher le cours</span></h2>
       </div>
       <div class="row">
         <div class="col-lg-10 offset-lg-1">
           <!-- search form -->
           <form method="post" action="{% url 'courses:kerko_kurs' %}" class="intro-newslatter"> {% csrf_token %}
-            <input name="search" type="text" placeholder="Kerko kursin">
-            <button type="submit" class="site-btn btn-dark">Kerko kursin</button>
+            <input name="search" type="text" placeholder="Rechercher le cours">
+            <button type="submit" class="site-btn btn-dark">Rechercher le cours</button>
           </form>
         </div>
       </div>
@@ -38,7 +38,7 @@
 
 <div class="course-warp">
   <ul class="course-filter controls">
-    <li class="control active" data-filter="all">Te gjitha lendet e kesaj klase</li>
+    <li class="control active" data-filter="all">Tous les articles de cette classe</li>
   </ul>
 <div class="featured-courses">
 
@@ -51,11 +51,11 @@
                 <h5>{{course.klasa}}</h5>
                 <a href="{% url 'courses:course_detail' course.slug %}"><h3 class="">{{course.titulli|capfirst}}</h3></a>
                 <p>{{course.pershkrimi}}</p>
-                <div class="students"><a href="{% url 'courses:course_detail' course.slug %}" class="btn btn-primary">Mesimet e klases</a></div>
+                <div class="students"><a href="{% url 'courses:course_detail' course.slug %}" class="btn btn-primary">Cours en classe</a></div>
               </div>
               <div class="course-author">
                 <div class="ca-pic set-bg" data-setbg="{{ request.user.profile.profile_pic.url }}"></div>
-                <p>Krijuar nga : {{course.krijues|capfirst}}, <span>Mesues </span></p>
+                <p>Créé par : {{course.krijues|capfirst}}, <span>Professeur </span></p>
               </div>
             </div>
           </div>
