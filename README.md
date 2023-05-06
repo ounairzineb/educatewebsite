@@ -1,4 +1,4 @@
-# educatewebsite E-Learning un site web pour etudiants et enseignants pour avoir des cours en ligne. L'application fournit une plate-forme de cours en ligne facile à utiliser pour les étudiants et les enseignants.
+# educatewebsite est un site web pour les etudiants pour consulter des cours sous forme de vidéos en ligne et les enseignants pour créer des cours en ligne. L'application fournit une plate-forme de cours en ligne facile à utiliser pour les étudiants et les enseignants.
 Nous avons utilisé Django, un framework web en Python, pour faciliter la création et la gestion de notre site web. En outre, nous avons choisi MySQL pour stocker nos données, car c'est un système de gestion de base de données très populaire, fiable et efficace.
 le professeur peut ajouter les cours (créer une classe qui possède des cours et puis créer un contenu) ![WhatsApp Image 2023-05-06 at 23 06 35](https://user-images.githubusercontent.com/79707457/236648567-4eacd5ba-4b97-4bd1-92e1-0305883d6dfa.jpeg)
 
@@ -10,7 +10,9 @@ L'etudiant peut s'authentifier grâce à une page login
 ![image](https://user-images.githubusercontent.com/119520692/236649192-5cdfd182-f536-4c3b-aad2-57d75bb5d9fb.png)
 
 
-en cliquant sur s'inscrire et automatiquement va avoir un profil comme étudiant:
+En remplir un formulaire pour s'inscrire 
+![image](https://user-images.githubusercontent.com/119520692/236649242-d68e22aa-d351-4af6-af53-47dcbcfa434f.png)
+et automatiquement il va avoir un profil comme étudiant:
 ![image](https://user-images.githubusercontent.com/119520692/236649107-65dd92b0-74cb-42aa-bbea-0b233a1f6aa9.png)
 et aussi pour le professeur pour avoir ses informations,
 ![WhatsApp Image 2023-05-06 at 23 20 04](https://user-images.githubusercontent.com/79707457/236648729-ebfac206-5fee-484f-8c15-a06c8f2f8ba3.jpeg)
