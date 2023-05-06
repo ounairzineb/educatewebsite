@@ -5,7 +5,10 @@ le professeur peut ajouter les cours (créer une classe qui possède des cours e
 ![WhatsApp Image 2023-05-06 at 23 03 12](https://user-images.githubusercontent.com/79707457/236648445-d68c0d01-4510-4255-89a5-b1574918ec49.jpeg) 
 
 
-l'etudiant peut s'authentifier grâce à une page login de l'étudiant en cliquant sur s'inscrire et automatiquement va avoir un profil et aussi pour le professeur 
+L'etudiant peut s'authentifier grâce à une page login 
+en cliquant sur s'inscrire et automatiquement va avoir un profil 
+
+et aussi pour le professeur 
 pour avoir ses informations,
 ![WhatsApp Image 2023-05-06 at 23 20 04](https://user-images.githubusercontent.com/79707457/236648729-ebfac206-5fee-484f-8c15-a06c8f2f8ba3.jpeg)
 
